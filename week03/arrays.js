@@ -67,9 +67,5 @@ let numbers = [12, 34, 21, 54];
 let luckyNumber = 21;
 
 //3. Use indexOf to see if the luckyNumber is in the array
-let isLuckyNumberPresent = numbers.indexOf(luckyNumber);
-if (isLuckyNumberPresent) {
-    console.log("The lucky number", luckyNumber, "is in the array.");
-} else {
-    console.log("The lucky number", luckyNumber, "is not in the array.");
-}
+let luckyIndex = numbers.indexOf(luckyNumber);
+console.log("The lucky number", luckyNumber, "is in the array at index", luckyIndex);
