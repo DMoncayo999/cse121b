@@ -51,7 +51,7 @@ function doStuffList(data) {
 
 function sortPokemon(list) {
   return list.sort((a, b) => {
-      const nameA = a.name; // Convert names to uppercase for case-insensitive comparison
+      const nameA = a.name; 
       const nameB = b.name;
       if (nameA < nameB) return -1;
       if (nameA > nameB) return 1;
