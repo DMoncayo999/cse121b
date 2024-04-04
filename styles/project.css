@@ -102,59 +102,43 @@ picture img {
     box-shadow: 0 0 30px #777;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto 1rem;
-    border: 1px solid rgba(0, 0, 0, .1);
-    padding: 1rem;
-    background-color: #eee;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-article {
-    margin-bottom: 1rem;
+.search-container {
+    margin-bottom: 20px;
 }
 
-article div {
-    margin-bottom: .5rem;
-    text-align: right;
+input[type="text"],
+select,
+button {
+    padding: 10px;
+    margin-right: 10px;
 }
 
-label {
-    padding: .35rem;
-}
-
-input {
-    padding: .35rem;
-}
-
-input[type="button"] {
-    padding: .5rem;
-    background-color: #444;
+button {
+    background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    width: 100%
 }
 
-input[type="checkbox"] {
-    width: 25px;
-    height: 25px;
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
-dt {
-    font-weight: 700;
+.recipe-card {
+    border: 1px solid #ccc;
+    padding: 20px;
 }
 
-dt::before {
-    content: "🏘️ ";
-}
-
-dd {
-    margin: 0 0 .5rem 2rem;
-    font-size: smaller;
+.recipe-card img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
@@ -197,88 +181,6 @@ footer {
     gap: 1rem;
 }
 
-/* ID Selectors */
-
-#home {
-    margin-top: 125px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-
-#section1 {
-    background-color: rgb(225, 250, 225, .5);
-}
-
-#section2 {
-    background-color: rgba(200, 200, 250, 0.5);
-
-}
-
-#section2 div {
-    margin-bottom: 1rem;
-}
-
-#section3 {
-    background-color: rgb(250, 225, 250, .5);
-}
-
-#sortBy {
-    appearance: none;
-    display: flex;
-    padding: .5rem;
-    background-color: #eee;
-    color: #444;
-    font-weight: 700;
-    margin: 1rem auto;
-    width: 200px;
-    border: 1px solid rgba(0, 0, 0, .2);
-    text-align: center;
-}
-
-#sortBy option:disabled {
-    font-style: italic;
-    padding: 1rem;
-    background-color: #111;
-    color: #eee;
-}
-
-#temples {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: .5rem;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-#temples article {
-    height: 250px;
-    margin: .5rem;
-    border: 1px solid rgba(0, 0, 0, .1);
-    padding: 1rem;
-    background-color: #eee;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#temples h4 {
-    color: navy;
-    font-size: smaller;
-}
-
-
-#temples img {
-    width: 250px;
-    height: auto;
-    box-shadow: 0 0 30px #777;
-    margin: .5rem;
-}
-
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
@@ -295,21 +197,6 @@ footer {
 
     section {
         min-width: 300px;
-    }
-
-    #home {
-        margin: 100px auto 20px;
-        grid-template-columns: 250px 1fr;
-        max-width: -moz-fit-content;
-        max-width: fit-content;
-    }
-
-    #task3 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5px;
-        margin: 0 auto;
-        max-width: 950px;
     }
 
 }
